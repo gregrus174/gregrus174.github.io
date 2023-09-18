@@ -1,0 +1,84 @@
+<!-- код html -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя веб-страница</title>
+    <style>
+        /* CSS стили для стилизации страницы */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+          width: 200px;
+          height: auto;
+          margin-bottom: 10px;
+          margin-left: 30px;
+          margin-top: 25px;
+          margin-right: 30px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        #more-info {
+            display: none;
+        }
+
+        .photo {
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover {
+            transform: scale(1.2);
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Григорий Селиванов</h1>
+    <p>Студент ЮУрГУ, 18 лет</p>
+    <img src="photo1.jpg" alt="Моя фотография 1" class="photo">
+    <img src="photo2.jpg" alt="Моя фотография 2" class="photo">
+    <button class="button" onclick="showMoreInfo()">Показать больше информации</button>
+    <p id="more-info">Учусь в Южно-Уральском государственном университете (Национальный исследовательский университет), Челябинск.
+Факультет экономики и управления, Информационные системы и технологии. Хочу начать работать с 1 курса, поэтому начинаю изучать различные способы заработка. В будущем хочу создать свой бизнес и , соответсвенно, интересную бизнес-идею, реализовав её с помощью различных знаний в смежных областях (как образования архитектора и строителя, только программирование и менеджмент). Знаю английский на уровне B2 - средне-продвинутый. <br> Предпочитаемый способ связи -   <a href="https://t.me/gregrus666">telegram</a> . </p>
+<!-- javaScript -->
+    <script>
+        function showMoreInfo() {
+            var moreInfo = document.getElementById("more-info");
+            var button = document.querySelector(".button");
+            if (moreInfo.style.display === "none") {
+                moreInfo.style.display = "block";
+                button.textContent = "Скрыть информацию";
+            } else {
+                moreInfo.style.display = "none";
+                button.textContent = "Показать больше информации";
+            }
+        }
+    </script>
+</body>
+</html>
